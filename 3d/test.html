@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angle test</title>
+	<style>
+	input{width:500p;margin-top:30px;}
+	.wrap{
+		width:200px;
+		height:200px;
+		margin:100px auto;
+		-webkit-perspective: 800;
+		-webkit-perspective-origin: 50% 50%;
+	}
+	#target{
+		width:100px;
+		height:100px;
+		background:#ccc;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="target">
+			
+		</div>
+		<span id='4'></span><input type="range" onchange='x()' min='-360' max='360' value='0' id='x' step='15'>
+		<span id='5'></span><input type="range" onchange='y()' min='-360' max='360' value='0' id='y' step='15'>
+		<span id='6'></span><input type="range" onchange='z()' min='-360' max='360' value='0' id='z' step='15'>
+	</div>
+</body>
+</html>
+<script>
+var target=document.getElementById('target');
+	function x(){
+		var num=document.getElementById('x');
+		target.style.transform='rotateX('+num.value+'deg)';
+		document.getElementById('4').innerText=num.value;
+
+	}
+	function y(){
+		var num=document.getElementById('y');
+		target.style.transform='rotateY('+num.value+'deg)';
+		document.getElementById('5').innerText=num.value;
+
+	}
+	function z(){
+		var num=document.getElementById('z');
+		target.style.transform='rotateZ('+num.value+'deg)';
+		document.getElementById('6').innerText=num.value;
+
+
+	}
+</script>

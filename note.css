@@ -1,0 +1,13 @@
+{border-radius方向：↖↗↘↙}
+{box-shadow:0 0 5px 5px red inset}inset把阴影弄到里面
+{border-image: url(surl.jpg) round/repeat/..}
+渐变：{background-image:linear-gradient(90deg,red,yellow,....);}
+文字变成省略号{
+	text-overflow:ellipsis; 
+    overflow:hidden; 
+    white-space:nowrap; }
+@font-face{font-family:'customfamily';src:url('swhere.otf');}
+{background-size:cover;}
+
+选择器 E(class^$*='')
+伪类 :not[class='no'] :empty :target
